@@ -6,10 +6,13 @@
 % até a chance de sair 15
 sum = 0.0;
 for i = (6:15)
-    [temp] = lancamentoMoeda(0.5, i, 15, 1e5);
+    [temp] = lancamentoMoeda(0.5, 15, i, 1e5);
     sum = sum + temp;
 end
 sum
+
+%outra forma
+[r0] = lancamentoMoeda(0.5, 15, (6:15), 1e5)
 
 %estimar as probabilidades para todo o espaco de amostragem (0:nLan)
 % sair 0 caras, 1 cara etc
