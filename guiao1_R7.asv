@@ -1,0 +1,18 @@
+% R7 Um conjunto de 50 pec¸as contem 8 pec¸as defeituosas. Escolhem-se aleatoriamente 10 pec¸as. Qual a ´
+% probabilidade de encontrar 3 defeituosas?
+
+% simulaçao
+pecasDef = 8;
+pecasTotal = 50;
+probEvento = pecasDef / pecasTotal;
+nExp = 1e4;
+evento = 3;
+experiencia = rand(10,nExp) < probEvento;
+sucessos = sum(experiencia) == evento;
+total = sum(sucessos) / nExp
+
+% analiticamente
+%prob da 1º def e da 2º def e da 3º def e das restantes não def (vezes as
+%possíveis permutações de posição)
+result = (pecasDef/pecasTotal) * ((pecasDef-1)/(pecasTotal-1)) * ((pecasDef-2)/(pecasTotal-2));
+result = result * ((pecasTotal-pecasDef-3)/pecasTotal-3)

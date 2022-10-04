@@ -1,0 +1,18 @@
+% R5 Considere um baralho com 20 cartas. Dessas cartas, 10 sao vermelhas e numeradas de 1 a 10. As
+% restantes 10 sao pretas e tambem numeradas de 1 a 10.
+% (a) De quantas maneiras diferentes se podem dispor as 20 cartas numa fila?
+% analitica
+nCartas = 5;
+analitica = factorial(nCartas)
+% simulacao
+nExp = 5;
+experiencia = linspace(nCartas, nExp)
+for i = (1:nExp)
+    cartasRestantes = (1:nCartas)
+    for j = (1:nCartas)
+        carta = randi(size(cartasRestantes));
+        experiencia(i,j) = cartasRestantes(carta);
+        cartasRestantes = cartasRestantes(cartasRestantes~=carta);
+    end
+end
+% (b) Calcule a probabilidade de se obter uma sequencia constitu ˆ ´ıda alternadamente por cartas pretas e vermelhas.
