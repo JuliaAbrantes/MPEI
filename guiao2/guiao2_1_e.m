@@ -11,7 +11,7 @@ n = 5; %numero de tentativas
 tentativas = rand(n,N) > p;
 num = sum(tentativas); %numero de filhos rapazes
 validas = num(num >= 1); %numero de filhos rapazes tal que 1 é rapaz
-countValidas = sum(num >= 1); %quantos tem o primeiro filho rapaz
-sucessos = sum(validas,1) == k; %2 rapazes sabendo que o 1º é rapaz
+countValidas = sum(num >= 1); %quantos tem mais que 1 rapaz
+sucessos = sum(validas,1) == k; %2 rapazes sabendo que o 1 é rapaz
 
 probSimulacao = sum(sucessos)/countValidas %probabilidade por simulação
