@@ -1,10 +1,10 @@
 %4. Considere uma festa em que esta presente um determinado n ´ umero ´ n de pessoas.
-%(a) Qual deve ser o menor valor de n para o qual a probabilidade de duas ou mais pessoas terem a
-%mesma data de aniversario (m ´ es e dia) ˆ e superior a 0,5 (assuma que um ano tem sempre 365 dias)?
-n = 2;
+%(b) Qual deve ser o valor de n para que a probabilidade da al´ınea anterior passe a ser superior a 0,9?
+
+n = 20;
 N = 1e5;
 prob = 0;
-while prob <= 0.5
+while prob <= 0.9
     success = 0;
     exp = randi(365, n, N);
     for i = (1:N)
