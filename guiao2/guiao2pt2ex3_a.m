@@ -1,0 +1,16 @@
+%3. Considere 4 lanc¸amentos de uma moeda equilibrada. Seja X a variavel aleat ´ oria representativa do ´
+%numero de coroas observados nos ´ 4 lanc¸amentos.
+%(a) Estime por simulac¸ao a func¸ ˜ ao massa de probabilidade ˜ pX(x) da variavel aleat ´ oria ´ X.
+Nexp = 1e5;
+nlan = 4;
+exp = sum(rand(nlan, Nexp) < 0.5);
+
+x = 0:nlan;
+px = zeros(1, nlan+1);
+for i = x
+    px(i+1) = length( exp(exp==i) )/Nexp;
+end
+stem(x,px)
+hold on
+stairs([-1, x, 5], cumsum([0, px, 0]))
+hold off

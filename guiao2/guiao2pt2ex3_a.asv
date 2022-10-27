@@ -14,3 +14,4 @@ stem(px)
 hold on
 stairs([-1, x, 5], cumsum([0, px, 0]))
 hold off
+sum(px)Nexp;
