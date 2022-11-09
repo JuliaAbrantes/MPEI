@@ -1,3 +1,6 @@
+%5. Considere que o tempo em cada dia e genericamente classificado num de 3 estados – sol, nuvens e chuva ´
+%– e que o tempo num determinado dia apenas depende do tempo no dia anterior. Assuma que estamos
+%no primeiro dia de janeiro e que as probabilidades de transic¸ao de estados s ˜ ao as da tabela seguinte.
 %(a) Defina, em Matlab, a correspondente matriz de transic¸ao.
 T = [.7 , .2, .3 ; .2, .3, .3; .1, .5, .4];
 %(b) Qual a probabilidade de estar sol no segundo dia e no terceiro dia de janeiro quando o primeiro dia
