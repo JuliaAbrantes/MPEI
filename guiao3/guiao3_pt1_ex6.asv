@@ -1,0 +1,22 @@
+%(a) Defina em Matlab a matriz de transic¸ao de estados ˜ T, com Tij sendo a probabilidade de ir do estado
+%j para o estado i num unico passo.
+T = [.8 0 .3 0 0 ;
+    .2 .6 .2 0 0 ;
+    0 .1 .4 0 0 ;
+    0 .3 0 1 0 ;
+    0 0 .1 0 1];
+%(b) Fac¸a um grafico com a probabilidade de, comec¸ando no estado 1, estar no estado 2 ao fim de ´ n
+%passos, com n a variar de 1 ate 100. Justifique o que observa.
+
+nmax = 100;
+n = (1:nmax);
+x0 = zeros(5, 1);
+x0(1) = 1;
+t = zeros(1,nmax);
+for i = n
+    temp = T^i * x0;
+    t(i) = temp(2);
+end
+plot(n,t);
+
+%a principio, a probabilidade aumenta a medida que o numero de iterações aumenta, 

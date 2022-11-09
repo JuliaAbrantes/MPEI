@@ -13,8 +13,10 @@ sum(T)
 x0 = zeros(n, 1);
 x0(1) = 1;
 x2 = T^2 * x0;
-x2(20)
+fprintf ('estado 20 em 2 iter = %5.6f\n',x2(20));
 x10 = T^10 * x0;
 x10(20)
+fprintf ('estado 20 em 10 iter = %5.6f\n',x10(20));
 x100 = T^100 * x0;
 x100(20)
+fprintf ('estado 20 em 100 iter = %5.6f\n',x100(20));
