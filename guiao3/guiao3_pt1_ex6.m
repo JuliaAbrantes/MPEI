@@ -44,9 +44,12 @@ F = inv(eye(3) - Q)
 %%
 %(f) Qual a media (valor esperado) do n ´ umero de passos at ´ e´ a absorc¸ ` ao comec¸ando no estado 1? E ˜
 %comec¸ando no estado 2? E se comec¸ando no estado 4?
-sum(F(:,1), 1)
-sum(F(:,2), 1)
-sum(F(:,3), 1)
+disp("passos até absorção começando 1 (sum col 1)")
+disp(sum(F(:,1), 1))
+disp("passos até absorção começando 2 (sum col 2)")
+disp(sum(F(:,2), 1))
+disp("passos até absorção começando 4 (sum col 4)")
+disp(sum(F(:,3), 1))
 
 
 

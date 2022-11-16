@@ -7,15 +7,20 @@ T = [.7 , .2, .3 ; .2, .3, .3; .1, .5, .4];
 %e de sol?
 x1 = [1, 0, 0]';
 x2 = (T * x1);
-x3 = (T^2 * x1);
 
-sol2 = x2(1)
-sol3 = x3(1)
+x2e3 = (T * x2);
+disp("sol, sol, sol")
+disp(x2e3(1))
 
 %(c) Qual a probabilidade de nao chover nem no segundo dia nem no terceiro dia de janeiro quando o ˜
 %primeiro dia e de sol?
-naochuva2 = x2(1) + x2(2)
-naochuva3 = x3(1) + x3(2)
+disp("sol, nao chuva")
+disp(x2(1) + x2(2))
+x2b = x2;
+x2b(3) = 0;
+x3b = T * x2b/(sum(x2b));
+disp("sol, nao chuva, nao chuva")
+disp(x3b(1) + x3b(2))
 
 %(d) Assumindo que o primeiro dia e de sol, determine o n ´ umero m ´ edio de dias de sol, de nuvens e de ´
 %chuva que se espera ter em todo o mes de janeiro.
