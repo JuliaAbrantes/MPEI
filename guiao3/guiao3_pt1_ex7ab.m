@@ -14,12 +14,9 @@ H = [0,  0, 0, 0,1/3, 0;
 H(:, sum(H,1) == 0) = 1/n; %no dead ends
 
 % page rank:
-r1 = zeros(n,n)+(1/n);
+r1 = zeros(n,1)+(1/n);
 r10 = H^9 * r1
 sum(r10, 2)
-
-%as paginas com maior page rank são C e D, com valor 2.9998 (em outra
-%escala que as outras páginas (que rondam os 10^-4)
 
 % (b) Identifique a ”spider trap”e o ”dead-end”contidos neste conjunto de paginas.
 % spider trap: C e D
