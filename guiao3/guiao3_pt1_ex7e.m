@@ -13,7 +13,7 @@ H = [0,  0, 0, 0,1/3, 0;
 H(:, sum(H,1) == 0) = 1/n
 %no spider traps
 b = 0.8;
-H = b.*H  +  (1-b)+(zeros(n,n).*1/n);
+H = b.*H  +  (1-b)+(zeros(n,1).*1/n);
 H = H./sum(H,1); %normalizar
 %estado inicial
 r1 = zeros(n,n)+(1/n);
